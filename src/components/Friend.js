@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Friend = ({ friend }) => {
-  const { name, email, username } = friend;
+  const { name, email, username, id } = friend;
 
   return (
     <div className="friend">
@@ -10,7 +10,7 @@ const Friend = ({ friend }) => {
       <p>Email: {email}</p>
       <p>
         <small>
-          User Name: <Link to={`/friend/${username}`}>{username}</Link>
+          User Name: <Link to={`/friend/${id}`}>{username}</Link>
         </small>
       </p>
       <br />

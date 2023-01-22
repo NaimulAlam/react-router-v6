@@ -9,8 +9,22 @@
    element: <div>Element</div>}
    { path: "about", element: <div>About page</div> },
 
-##6.Things we need to create a route
+## Things we need to create a route
+
+6.Things we need to create a route
 i. create a Link: so we can go to that specific route
 ii. Create component: to add what we will show on tat route
 iii. Add route so that react router know which component to show oon display when we visit the route
+iv. Dynamic path 'products/:productId' ":" is important for dynamic routes
+v. Load Data/ Fetch data using loader ;
+example:  
+{
+path: "/friend/:friendId",
+loader: async ({ params }) => {
+return await fetch(
+`https://jsonplaceholder.typicode.com/users/${params.  friendId}`
+);
+},
+element: <FriendDeatails />,
+},
 
